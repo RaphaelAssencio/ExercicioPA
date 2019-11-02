@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de Exercícios 4 PARTE II</title>
+
+        <script language=javascript>
+
+            document.write("<h1> Exercício 04 </h1>");
+            document.write("<h3> Faça um programa que leia um valor inteiro qualquer e exiba a mensagem dizendo se o número lido é perfeito ou não. OBS:. número perfeito é um número o qual a soma de todos os seus divisores positivos próprios (excluindo ele mesmo)é igual ao próprio número.</h3>");
+
+            numero=parseInt(prompt("Digite um número inteiro."));
+            indice=1;
+            divisoes=0;
+            perfeito=0;
+            while(indice<numero)
+            {
+                modulo = numero%indice;
+                if(modulo==0)
+                {
+                    perfeito=perfeito+indice;
+                }
+                indice++;   
+            }
+            if(numero==perfeito)
+            {
+                document.write("<p>O número digitado: "+numero+". <strong>É um número perfeito</strong></p>");
+            }else
+            {
+                document.write("<p>O número digitado: "+numero+". <strong>Não é um número perfeito</strong></p>");
+            }
+
+
+        </script>
+    </head>
+    <body></body>
+
+</html>

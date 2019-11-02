@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de Exercícios 4</title>
+
+        <script language=javascript>
+
+            document.write("<h1> Exercício 07 </h1>");
+            document.write("<h3> Ler 10 valores e escrever quantos desses valores lidos estão no intervalo [10,20] (incluindo os valores 10 e 20 no intervalo) e quantos deles estão fora deste intervalo.</h3>");
+
+            indice=1;
+            dentro=0;
+            fora=0;
+            while(indice<=10)
+            {
+             numero = parseInt(prompt("Informe o "+indice+"° valor."));
+             if(numero >= 10)
+             {
+                 if(numero <=20)
+                 {
+                    dentro++;
+                 }else{
+                    fora++;
+                 }
+            }else{
+                fora++;
+             }
+             indice++;             
+            }
+            
+            document.write("Você digitou "+dentro+" números dentro do intervalo de 10 a 20.</br></br>Você digitou "+fora+" números fora do intervalo de 10 a 20.");
+            
+
+
+        </script>
+    </head>
+    <body></body>
+
+</html>

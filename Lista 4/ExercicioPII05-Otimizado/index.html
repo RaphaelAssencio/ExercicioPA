@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Lista de Exercícios 4 PARTE II</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><strong>Exercício 05</strong></h1>
+					
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Questão</h2>
+							<p>Faça um programa que imprima os 10 primeiros números da sequência de Fibonacci.</p> 
+							<p>OBS:. Os dois primeiros termos da série são 1 e 1, e os demais são gerados pela soma do número atual + seu antecessor.</p>
+						</header>
+						<span class="image"><img src="images/logica.jpg" alt="" /></span>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
+
+			
+			<!-- Three -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/fibonacci.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Solução:</h2>
+							
+						</header>
+						<script language=javascript>
+			
+							indice=1;
+							valorA=0;
+							valorB=1;
+							valorC=1;
+							soma=0;
+							
+							while(indice<=10)
+							{
+							   document.write("<p><pre> "+valorA+" -- "+valorB+" -- "+valorC+" </pre></p>");
+							   valorA=valorC;
+							   soma=valorB+valorC;
+							   valorB=soma;
+							   valorC=valorA+valorB;
+							   indice++; 
+							}			   
+				
+				
+						</script>
+						
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
+	
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>&copy; Raphael Assencio da Silva</li><li>Design: HTML5 / CSS / JavaScript</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

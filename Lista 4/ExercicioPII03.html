@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de Exercícios 4 PARTE II</title>
+
+        <script language=javascript>
+
+            document.write("<h1> Exercício 03 </h1>");
+            document.write("<h3> Faça um programa que leia um numero inteiro qualquer e exiba a mensagem dizendo se o número é primo ou não.</h3>");
+
+            numero=parseInt(prompt("Digite um número inteiro."));
+            indice=1;
+            divisoes=0;
+            while(indice<=numero)
+            {
+                modulo = numero%indice;
+                if(modulo==0)
+                {
+                    divisoes++; 
+                }
+                indice++;   
+            }
+            if(divisoes<=2)
+            {
+                document.write("<p>O número digitado: "+numero+". <strong>É um número primo</strong></p>");
+            }else
+            {
+                document.write("<p>O número digitado: "+numero+". <strong>Não é um número primo</strong></p>");
+            }
+
+
+        </script>
+    </head>
+    <body></body>
+
+</html>

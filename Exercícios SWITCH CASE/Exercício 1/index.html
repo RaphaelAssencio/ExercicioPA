@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Exercícios Switch Case</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+
+			<!-- Cabeçalho -->
+				<header id="header">
+					<h1 id="logo"><strong>Exercício 01</strong></h1>
+					
+				</header>
+
+			<!-- Questão -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Questão</h2>
+							<p>Usando a função Switch Case, desenvolva um programa que exiba um "menu" com as seguintes opções:</p> 
+							<p><pre>1- Reais para Dolares 2- Dolares para Reais 3- Reais para Libras 4- Libras para Reais 5- Dolares para Libras 6- Libras para Dolares 7- Finalizar Aplicação</pre></p>
+							<p>Em seguida, solicitar um valor de conversão e exibir o resultado, de acordo com as moedas escolhidas, utilizando como referência os valores abaixo:</p>
+							<p><pre>Libras = R$ 5,14		Dolar = R$ 4,44</pre></p>
+							<p>A mensagem deve ser no padrão abaixo (exemplo):</p>
+							<p>O resultado do seu calculo: xxx Dolares Equivalem a xxx Reais.</p>
+						</header>
+						<span class="image"><img src="images/logica1.jpg" alt="" /></span>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
+
+			
+			<!-- Solução -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/background.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h4>Solução:</h4>
+							
+						</header>
+						<script language=javascript>
+			
+							conversao=0;
+							valorEntrada=0.00;
+							valorSaida=1.00;
+							moedaEntrada="nada";
+							moedaSaida="nada";
+							dolar=0.00;
+							libra=0.00;
+							fator=0.00;
+							executar=true;
+
+							dolar=parseFloat(prompt("Inserir a cotação do DOLAR em REAIS atual."));
+							libra=parseFloat(prompt("Inserir a cotação da LIBRA em REAIS atual"));
+
+							while(executar==true)
+							{
+								conversao=parseInt(prompt("Escolha a conversão de moeda desejada: \n1-Reais para Dolares\n2-Dolares para Reais\n3-Reais para Libras\n4-Libras para Reais\n5-Dolares para Libras\n6-Libras para Dolares\n7-Finalizar plicação"));
+
+								switch(conversao)
+								{
+									case 1:
+											moedaEntrada="Reais";
+											moedaSaida="Dolares";
+											fator=1/dolar;
+									break;
+
+									case 2:
+											moedaEntrada="Dolares";
+											moedaSaida="Reais";
+											fator=dolar;
+									break;
+
+									case 3:
+											moedaEntrada="Reais";
+											moedaSaida="Libras";
+											fator=1/libra;
+											break;
+
+									case 4:
+											moedaEntrada="Libras";
+											moedaSaida="Reais";
+											fator=libra;
+											break;
+
+									case 5:
+											moedaEntrada="Dolares";
+											moedaSaida="Libras";
+											fator=dolar/libra;
+											break;
+
+									case 6:
+											moedaEntrada="Libras";
+											moedaSaida="Dolares";
+											fator=libra/dolar;
+											break;
+
+									case 7:
+											executar=false;
+											
+											break;
+								}
+
+								if(executar==true)
+								{
+									valorEntrada=parseFloat(prompt("Informe a quantidade de "+moedaEntrada+" que deseja converter para "+moedaSaida+"."));
+									valorSaida=valorEntrada*fator;
+									document.write("<p>O resultado do calculo: "+parseFloat(valorEntrada.toFixed(2))+" "+moedaEntrada+" EQUIVALEM A "+parseFloat(valorSaida.toFixed(2))+" "+moedaSaida+"</p>");
+									alert("O resultado do calculo: "+parseFloat(valorEntrada.toFixed(2))+" "+moedaEntrada+" EQUIVALEM A "+parseFloat(valorSaida.toFixed(2))+" "+moedaSaida);
+								}else
+								{
+									document.write("<p>APLICAÇÃO FINALIZADA</p>");									
+								}
+
+							}			   
+				
+				
+						</script>
+						
+					</div>
+					<a href="#footer" class="goto-next scrolly">Next</a>
+				</section>
+	
+			<!-- Rodape -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>&copy; Raphael Assencio da Silva</li><li>Design: HTML5 / CSS / JavaScript</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

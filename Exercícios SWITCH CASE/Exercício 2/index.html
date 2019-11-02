@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Exercícios Switch Case</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+
+			<!-- Cabeçalho -->
+				<header id="header">
+					<h1 id="logo"><strong>Exercício 02</strong></h1>
+					
+				</header>
+
+			<!-- Questão -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Questão</h2>
+							<p>Faça um programa que leia o nome e a idade de varias pessoas.<br>Ao final de cada pessoa, o programa deve exibir a mensagem:<br>Continuar inserindo nomes e idades ? (s / n)<br> Ao finalizar exibir na tela as seguintes informações:</p>
+							<p>Nome da pessoa mais idosa</p>
+							<p>Nome da pessoa mais jovem</p>
+							<p>Média de idade geral</p>
+							<p>Total de pessoas lidas</p>
+						</header>
+						<span class="image"><img src="images/logica1.jpg" alt="" /></span>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
+
+			
+			<!-- Solução -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/background.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h4>Solução:</h4>
+							
+						</header>
+						<script language=javascript>
+			
+							nome="nada";
+							idade=0;
+							nomeIdoso="nada";
+							nomeJovem="nada";
+							idadeIdoso=0;
+							idadeJovem=9999;
+							mediaIdade=0;
+							somaIdades=0;
+							qntPessoas=0;
+							executar=true;
+							opcao="nada";
+
+							while(executar==true)
+							{
+								nome=prompt("Informa o NOME da pessoa:");
+								idade=parseInt(prompt("Informa a IDADE de "+nome+" :"));
+								qntPessoas++;
+																
+								if(idade>idadeIdoso)
+								{
+									idadeIdoso=idade;
+									nomeIdoso=nome;
+								}
+								if(idade<idadeJovem)
+								{
+									idadeJovem=idade;
+									nomeJovem=nome;
+								}	
+
+								somaIdades=somaIdades+idade;
+
+								opcao=prompt("Continuar inserindo nomes e idades ? (s / n)");
+								if(opcao=="n")
+								{
+									executar=false;
+								}								
+							}			   
+							
+							mediaIdade=somaIdades/qntPessoas;
+
+							document.write("<p>Nome da pessoa mais idosa: "+nomeIdoso+"</br>Idade: "+idadeIdoso+"</p>");
+							document.write("<p>Nome da pessoa mais jovem: "+nomeJovem+"</br>Idade: "+idadeJovem+"</p>");
+							document.write("<p>Média de idade geral: "+mediaIdade+"</p>");
+							document.write("<p>Total de pessoas lidas: "+qntPessoas+"</p>");
+
+						</script>
+						
+					</div>
+					<a href="#footer" class="goto-next scrolly">Next</a>
+				</section>
+	
+			<!-- Rodape -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>&copy; Raphael Assencio da Silva</li><li>Design: HTML5 / CSS / JavaScript</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

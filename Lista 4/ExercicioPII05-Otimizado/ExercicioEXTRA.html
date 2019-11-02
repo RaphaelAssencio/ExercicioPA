@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Lista de Exercícios 4 PARTE Extra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><strong>Exercício EXTRA</strong></h1>
+                    <script lang="javascript">
+                        inicial=parseInt(prompt("Digite um número correspondente a faixa inicial."));
+                        final=parseInt(prompt("Digite um número maior que "+inicial+" , correspondente a faixa final."));
+                    </script> 
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Questão</h2>
+							<p>Faça um programa que leia um faixa de valores inteiros qualquer e exiba a mensagem dizendo quais são os números primo dentro desta faixa.</p> 
+							
+						</header>
+						<span class="image"><img src="images/logica.jpg" alt="" /></span>
+					</div>
+                    <a href="#three" class="goto-next scrolly">Next</a>
+                   
+				</section>
+
+
+			
+			<!-- Three -->
+				<section id="three" class="spotlight style3 left">
+					<span class="image fit main bottom"><img src="images/background.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>Solução:</h2>
+							
+						</header>
+						<script language="javascript">
+			
+                           
+                            
+                            varedura = inicial;
+                            document.write("<p>Os números primos dentro da faixa de "+inicial+" a "+final+" são:</p></br>");
+                        
+                            while(varedura<=final)
+                            {
+
+                                indice=1;
+                                divisoes=0;
+                                while(indice<=varedura)
+                                {
+                                    modulo = varedura%indice;
+                                    if(modulo==0)
+                                    {
+                                        divisoes++; 
+                                    }
+                                    indice++;   
+                                }
+                                if(divisoes<=2)
+                                {
+                                    document.write(varedura+" ,");
+                                }
+                                
+                                varedura++;
+                            }
+				
+						</script>
+						
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
+	
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>&copy; Raphael Assencio da Silva</li><li>Design: HTML5 / CSS / JavaScript</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
